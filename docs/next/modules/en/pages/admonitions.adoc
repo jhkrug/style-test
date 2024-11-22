@@ -1,0 +1,34 @@
+= Admonitions
+
+[NOTE]
+.Note title
+====
+Note content
+====
+
+A normal paragraph in here.
+
+[TIP]
+.Tip title
+====
+Tip content
+====
+
+[IMPORTANT]
+.Important title
+====
+Important content
+====
+
+[CAUTION]
+.Caution title
+====
+Caution content
+====
+
+[WARNING]
+.Warning title
+====
+Warning content
+====
+

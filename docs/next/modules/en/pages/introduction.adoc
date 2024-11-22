@@ -1,3 +1,68 @@
 = Style test
 
-This is a paragraph.
+A paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat.
+
+== Level 2
+
+A paragraph. Example of inline `code fragment`. This is a https://blah.com[link].
+
+https://localhost:8080
+
+A code block with a title and callout.
+
+.This code does nada.
+[subs="+attributes", bash]
+----
+#!/bin/bash
+
+# A comment line
+
+function foobar() {
+	print "$1"
+}
+
+if [ $x -eq $y ]; then
+	foobar "zzzzzz" <1>
+fi
+----
+<1> What on earth does this do?
+
+
+=== Level 3
+
+A paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+.A details block. Click for content.
+[%collapsible]
+=====
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat.
+=====
+
+==== Level 4
+
+A paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+===== Level 5
+
+A paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat.
+
+Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+

@@ -1,1 +1,7 @@
-* xref:introduction.adoc[Introduction]
+* xref:introduction.adoc[]
+* xref:admonitions.adoc[]
+* xref:tabs.adoc[]
+* xref:tables.adoc[]
+* xref:details.adoc[]
+* xref:lists.adoc[]
+* xref:code.adoc[]
