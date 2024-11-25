@@ -2,4 +2,5 @@ tmp/
 docs-old/
 node_modules/
 build/
+build-ns/
 kramdown_md_to_asciidoc/

@@ -1,1 +1,211 @@
 = Collapsible
+
+== Nested
+
+.nested collapsible
+[%collapsible]
+=====
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+.nested collapsible
+[%collapsible]
+======
+Deep, down. In the depths.
+======
+=====
+
+== Containing tabbed content
+
+.tabbed content inside
+[%collapsible]
+=====
+
+[tabs]
+======
+Tab 1::
++
+=======
+.Rust code block
+[subs="+attributes", rust]
+----
+fn validate(payload: &[u8]) -> CallResult {
+    let validation_request: ValidationRequest<Settings> = ValidationRequest::new(payload)?;
+
+    info!(LOG_DRAIN, "starting validation");
+    if validation_request.request.kind.kind != apicore::Pod::KIND {
+        warn!(LOG_DRAIN, "Policy validates Pods only. Accepting resource"; "kind" => &validation_request.request.kind.kind);
+        return kubewarden::accept_request();
+    }
+
+    match serde_json::from_value::<apicore::Pod>(validation_request.request.object) {
+        Ok(pod) => {
+            let pod_name = pod.metadata.name.unwrap_or_default();
+            if validation_request
+                .settings
+                .invalid_names
+                .contains(&pod_name)
+            {
+                kubewarden::reject_request(
+                    Some(format!("pod name {:?} is not accepted", pod_name)),
+                    None,
+                    None,
+                    None,
+                )
+            } else {
+                kubewarden::accept_request()
+            }
+        }
+        Err(_) => {
+            // We were forwarded a request we cannot unmarshal or
+            // understand, just accept it
+            kubewarden::accept_request()
+        }
+    }
+}
+----
+=======
+
+Tab 2::
++
+=======
+. list item
+. list item
+.. list item
+=======
+
+Tab 3::
++
+=======
+Tab 3 content
+
+|===
+| Header 1 | Header 2
+
+| Row 1, Col 1
+| Row 1, Col 2
+
+| Row 2, Col 1
+| Row 2, Col 2
+
+| Row 3, Col 1
+| Row 3, Col 2
+
+| Row 4, Col 1
+| Row 4, Col 2
+
+| Row 5, Col 1
+| Row 5, Col 2
+|===
+=======
+======
+
+=====
+
+== Containing a table
+
+.table inside
+[%collapsible]
+=====
+|===
+| Header 1 | Header 2
+
+| Row 1, Col 1
+| Row 1, Col 2
+
+| Row 2, Col 1
+| Row 2, Col 2
+
+| Row 3, Col 1
+| Row 3, Col 2
+
+| Row 4, Col 1
+| Row 4, Col 2
+
+| Row 5, Col 1
+| Row 5, Col 2
+|===
+
+=====
+
+== Containing a code block
+
+.code block inside
+[%collapsible]
+=====
+.Rust code block
+[subs="+attributes", rust]
+----
+fn validate(payload: &[u8]) -> CallResult {
+    let validation_request: ValidationRequest<Settings> = ValidationRequest::new(payload)?;
+
+    info!(LOG_DRAIN, "starting validation");
+    if validation_request.request.kind.kind != apicore::Pod::KIND {
+        warn!(LOG_DRAIN, "Policy validates Pods only. Accepting resource"; "kind" => &validation_request.request.kind.kind);
+        return kubewarden::accept_request();
+    }
+
+    match serde_json::from_value::<apicore::Pod>(validation_request.request.object) {
+        Ok(pod) => {
+            let pod_name = pod.metadata.name.unwrap_or_default();
+            if validation_request
+                .settings
+                .invalid_names
+                .contains(&pod_name)
+            {
+                kubewarden::reject_request(
+                    Some(format!("pod name {:?} is not accepted", pod_name)),
+                    None,
+                    None,
+                    None,
+                )
+            } else {
+                kubewarden::accept_request()
+            }
+        }
+        Err(_) => {
+            // We were forwarded a request we cannot unmarshal or
+            // understand, just accept it
+            kubewarden::accept_request()
+        }
+    }
+}
+----
+=====
+
+== Containing lists, text admonitions
+
+.lists, text, admonitions
+[%collapsible]
+=====
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+- item
+- item
+-- item
+-- item
+- item
+
+. item
+.. item
+.. item
+. item
+
+[TIP]
+.Tip title
+====
+Tip content
+====
+
+[IMPORTANT]
+.Important title
+====
+Important content
+====
+
+=====

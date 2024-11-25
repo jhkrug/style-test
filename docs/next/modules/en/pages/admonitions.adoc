@@ -30,5 +30,13 @@ Caution content
 .Warning title
 ====
 Warning content
+
+And nested:
+
+[IMPORTANT]
+.Important title
+=====
+Important content. Which has the wrong icon (sam as the outer block). Why? Todo!
+=====
 ====
 

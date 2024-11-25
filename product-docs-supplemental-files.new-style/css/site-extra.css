@@ -752,6 +752,10 @@ ul.sectlevel1 {
  font-size: 1rem;
 }
 
+.doc .admonitionblock {
+  margin: 0.75rem;
+}
+
 .doc {
   max-width: 56rem;
 }
@@ -820,7 +824,7 @@ div#toctitle {
 }
 
 .doc details {
-  margin-left: 0px; /* Ensure we are inline with the left edge of the page */
+  margin: 0.75rem;
 }
 
 .doc summary {
@@ -1104,7 +1108,6 @@ nav.pagination a {
 }
 
 /* Added to tone down the contrast, to blend better */
-/* Doesn't work, why? Does it have to be in the vendor tabs.css? */
 .doc .exampleblock > .content, .doc details.result > .content {
   background: inherit;
   border: 1px solid #0c322c32; /* SUSE pine, but paler */
