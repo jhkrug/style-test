@@ -1102,3 +1102,13 @@ nav.pagination a {
   font-size: .94444rem;
   font-weight: 400
 }
+
+/* Added to tone down the contrast, to blend better */
+/* Doesn't work, why? Does it have to be in the vendor tabs.css? */
+.doc .exampleblock > .content, .doc details.result > .content {
+  background: inherit;
+  border: 1px solid #0c322c32; /* SUSE pine, but paler */
+  border-radius: 2px;
+  padding: .75rem;
+}
+
