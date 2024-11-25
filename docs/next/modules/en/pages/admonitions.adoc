@@ -36,7 +36,7 @@ And nested:
 [IMPORTANT]
 .Important title
 =====
-Important content. Which has the wrong icon (sam as the outer block). Why? Todo!
+Important content. Which has the wrong icon (same as the outer block). Why? Todo!
 =====
 ====
 
