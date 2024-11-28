@@ -4,7 +4,7 @@
 ====
 Tab 1::
 +
-=====
+--
 .Rust code block
 [subs="+attributes", rust]
 ----
@@ -43,19 +43,19 @@ fn validate(payload: &[u8]) -> CallResult {
     }
 }
 ----
-=====
+--
 
 Tab 2::
 +
-=====
+--
 . list item
 . list item
 .. list item
-=====
+--
 
 Tab 3::
 +
-=====
+--
 Tab 3 content
 
 |===
@@ -76,6 +76,6 @@ Tab 3 content
 | Row 5, Col 1
 | Row 5, Col 2
 |===
-=====
+--
 ====
 
