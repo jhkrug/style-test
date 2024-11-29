@@ -10,7 +10,14 @@ local-ns:
 	npx antora --version
 	npx antora --stacktrace --log-format=pretty --log-level=info \
 		st-local-playbook-new-style.yml \
-		2>&1 | tee tmp/local-build.log
+		2>&1 | tee tmp/local-build-new-style.log
+
+local-def:
+	mkdir -p tmp
+	npx antora --version
+	npx antora --stacktrace --log-format=pretty --log-level=info \
+		st-local-playbook-default.yml \
+		2>&1 | tee tmp/local-build-default.log
 
 remote:
 	mkdir -p tmp
@@ -30,12 +37,22 @@ remote-ns:
 	npx antora --version
 	npx antora --stacktrace --log-format=pretty --log-level=info \
 		st-remote-playbook-new-style.yml \
-		2>&1 | tee tmp/remote-build.log
+		2>&1 | tee tmp/remote-build-new-style.log
 
+remote-def:
+	mkdir -p tmp
+	wget 'https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable' -O tmp/ui-bundle.zip
+	unzip -o tmp/ui-bundle.zip -d tmp/sp
+	npm install && npm update
+	npx antora --version
+	npx antora --stacktrace --log-format=pretty --log-level=info \
+		st-remote-playbook-default.yml \
+		2>&1 | tee tmp/remote-build-def.log
 
 clean:
 	rm -rf build
 	rm -rf build-ns
+	rm -rf build-def
 
 environment:
 	npm install && npm update

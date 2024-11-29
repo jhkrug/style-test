@@ -1,6 +1,10 @@
 = Style test
 
-A paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+A paragraph.
+Formatting *strong*, **st**rong, _italic_, `mono`, #highlight#, ~subscript~,
+^superscript^,  "curved double quotes".
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
 veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 consequat.
@@ -71,4 +75,85 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse
 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
+== Blocks
 
+=== Example block
+
+.Example block title
+====
+Example content
+====
+
+=== Fenced block
+
+.A fenced block title
+```
+Fenced block content
+```
+
+=== Listing block
+
+.Listing block title
+[listing]
+----
+Listing block content
+----
+
+=== Literal block
+
+.Literal block title
+[literal]
+----
+Literal block content
+----
+
+=== Open block
+
+.Open block title
+--
+Open block content
+--
+
+=== Passthrough block
+
+.Passthrough block title
+[pass]
+++++
+Passthrough block content
+++++
+
+=== Quote block
+
+.Quote block title
+[quote, Author]
+____
+Quote block content
+____
+
+=== Sidebar block
+
+.Sidebar block title
+[sidebar]
+****
+Sidebar block content
+****
+
+=== Source block
+[source, Author]
+----
+Source block content
+----
+
+=== Stem block
+[stem]
+++++
+Stem block content
+++++
+
+=== Verse block
+
+.Verse block title
+[verse, Author]
+____
+Verse block content
+____

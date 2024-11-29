@@ -3,4 +3,5 @@ docs-old/
 node_modules/
 build/
 build-ns/
+build-def/
 kramdown_md_to_asciidoc/

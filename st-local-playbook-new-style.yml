@@ -16,7 +16,6 @@ ui:
 
 asciidoc:
   attributes:
-    kw-build-type: 'product' # 'community' or 'product'
     page-pagination: ''
   extensions:
     - asciidoctor-kroki

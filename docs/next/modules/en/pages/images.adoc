@@ -1,0 +1,14 @@
+= Images
+
+== Block image
+
+image::jhk.jpg[alt="The alt text"]
+
+== Block image with title
+
+.Who's that idiot?
+image::jhk.jpg[Somebody else]
+
+== Inline image
+
+This paragraph contains an inline image, image:jhk.jpg[width=30,height=30,alt="Alt text"]. Paragraph continues.

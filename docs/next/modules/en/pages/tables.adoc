@@ -1,3 +1,4 @@
+:experimental:
 = Tables
 
 |===
@@ -18,3 +19,35 @@
 | Row 5, Col 1
 | Row 5, Col 2
 |===
+
+Next, a table with keyboard macros.
+
+|===
+|Shortcut |Purpose
+
+|kbd:[F11]
+|Toggle fullscreen
+
+|kbd:[Ctrl+T]
+|Open a new tab
+
+|kbd:[Ctrl+Shift+N]
+|New incognito window
+
+|kbd:[\ ]
+|Used to escape characters
+
+|kbd:[Ctrl+\]]
+|Jump to keyword
+
+|kbd:[Ctrl + +]
+|Increase zoom
+|===
+
+And more
+
+Press kbd:[esc] to exit insert mode.
+
+Use the shortcut kbd:[Ctrl+T] to open a new tab in your browser.
+
+kbd:[Ctrl+Shift+N] will open a new incognito window.
