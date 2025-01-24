@@ -1,13 +1,16 @@
 = style-test
 
+The `dsc-style-bundle` and `product-docs-supplemental-files` subdirectories are
+git submodules.
+
 Testing the style package.
 
-`make environment`
+ - `make environment`
 
-`make antora-default` for the default style.
+ - `make antora-default` for the default style.
 
-`make rancher-current` for the current rancher style.
+ - `make rancher-current` for the current rancher style.
 
-`make rancher-dsc` for the new rancher DSC style.
+ - `make rancher-dsc` for the new rancher DSC style.
 
 Then open `build-[antora-def|rancher-current|rancher-dsc]/site/index.html` in a browser.
