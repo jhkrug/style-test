@@ -18,6 +18,7 @@ asciidoc:
     page-pagination: ""
   extensions:
     - "@asciidoctor/tabs"
+
 antora:
   extensions:
     - require: "@antora/lunr-extension"
@@ -27,4 +28,4 @@ antora:
       mermaid_initialize_options: # <4>
 
 output:
-  dir: build-local-antora-def/site
+  dir: build-antora-def/site

@@ -20,6 +20,7 @@ asciidoc:
     tabs-sync-option: ""
   extensions:
     - "@asciidoctor/tabs"
+
 antora:
   extensions:
     - require: "@antora/lunr-extension"
@@ -29,4 +30,4 @@ antora:
       mermaid_initialize_options: # <4>
 
 output:
-  dir: build-local-rancher-current/site
+  dir: build-rancher-current/site
