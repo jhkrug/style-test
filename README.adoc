@@ -9,3 +9,5 @@ Testing the style package.
 `make rancher-current` for the current rancher style.
 
 `make rancher-dsc` for the new rancher DSC style.
+
+Then open `build-[antora-def|rancher-current|rancher-dsc]/site/index.html` in a browser.
