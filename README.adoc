@@ -8,4 +8,4 @@ Testing the style package.
 
 `make rancher-current` for the current rancher style.
 
-`make rancher-dsc` for the new ranche DSC style.
+`make rancher-dsc` for the new rancher DSC style.
