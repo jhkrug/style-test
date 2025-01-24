@@ -1,3 +1,11 @@
 = style-test
 
 Testing the style package.
+
+`make environment`
+
+`make antora-default` for the default style.
+
+`make rancher-current` for the current rancher style.
+
+`make rancher-dsc` for the new ranche DSC style.
