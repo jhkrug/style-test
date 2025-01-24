@@ -1,0 +1,6 @@
+[submodule "dsc-style-bundle"]
+	path = dsc-style-bundle
+	url = https://github.com/susedoc/dsc-style-bundle.git
+[submodule "product-docs-supplemental-files"]
+	path = product-docs-supplemental-files
+	url = https://github.com/rancher/product-docs-supplemental-files.git
