@@ -7,3 +7,4 @@
 * xref:lists.adoc[]
 * xref:code.adoc[]
 * xref:images.adoc[]
+* xref:mermaid.adoc[]

@@ -22,7 +22,6 @@ asciidoc:
     page-pagination: ''
     tabs-sync-option: ''
   extensions:
-    - asciidoctor-kroki
     - '@asciidoctor/tabs'
 antora:
   extensions:

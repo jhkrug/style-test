@@ -18,7 +18,6 @@ asciidoc:
   attributes:
     page-pagination: ''
   extensions:
-    - asciidoctor-kroki
     - '@asciidoctor/tabs'
 antora:
   extensions:

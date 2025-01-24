@@ -1,6 +1,8 @@
 :experimental:
 = Tables
 
+[#ref-table-1]
+.The first table
 |===
 | Header 1 | Header 2
 
@@ -22,6 +24,8 @@
 
 Next, a table with keyboard macros.
 
+[#ref-table-2]
+.The second table
 |===
 |Shortcut |Purpose
 
@@ -51,3 +55,69 @@ Press kbd:[esc] to exit insert mode.
 Use the shortcut kbd:[Ctrl+T] to open a new tab in your browser.
 
 kbd:[Ctrl+Shift+N] will open a new incognito window.
+
+And more
+
+Press kbd:[esc] to exit insert mode.
+
+Use the shortcut kbd:[Ctrl+T] to open a new tab in your browser.
+
+kbd:[Ctrl+Shift+N] will open a new incognito window.
+
+And more
+
+Press kbd:[esc] to exit insert mode.
+
+Use the shortcut kbd:[Ctrl+T] to open a new tab in your browser.
+
+kbd:[Ctrl+Shift+N] will open a new incognito window.
+
+And more
+
+Press kbd:[esc] to exit insert mode.
+
+Use the shortcut kbd:[Ctrl+T] to open a new tab in your browser.
+
+kbd:[Ctrl+Shift+N] will open a new incognito window.
+
+And more
+
+Press kbd:[esc] to exit insert mode.
+
+Use the shortcut kbd:[Ctrl+T] to open a new tab in your browser.
+
+kbd:[Ctrl+Shift+N] will open a new incognito window.
+
+And more
+
+Press kbd:[esc] to exit insert mode.
+
+Use the shortcut kbd:[Ctrl+T] to open a new tab in your browser.
+
+kbd:[Ctrl+Shift+N] will open a new incognito window.
+
+== Referencing a table
+
+Look at xref:#ref-table-1[] to the table at the top of the page.
+
+Look at xref:#ref-table-2[] to the second table.
+
+== More tables
+
+.Good
+[%header,cols="2,1,1"]
+|===
+| Animal | Legs | Can Fly?
+| Dog | 4 | no
+| Bird | 2 | yes
+| Snake | 0 | no
+|===
+
+.Bad
+[%header,cols="2,1,1"]
+|===
+| | Legs | Can Fly?
+| Dog | 4 | no
+| Bird | 2 | yes
+| Snake | 0 | no
+|===
