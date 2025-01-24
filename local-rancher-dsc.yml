@@ -1,0 +1,29 @@
+site:
+  title: Style test - Rancher DSC
+  start_page: next@style-test:en:introduction.adoc
+content:
+  sources:
+    - url: ./
+      branches: [HEAD]
+      start_paths: [docs/next]
+ui:
+  bundle:
+    url: https://github.com/SUSEdoc/dsc-style-bundle/blob/main/default-ui/ui-bundle.zip?raw=true
+    snapshot: true
+  supplemental_files: ./dsc-style-bundle/supplemental-files/rancher
+asciidoc:
+  attributes:
+    page-pagination: ""
+  extensions:
+    - "@asciidoctor/tabs"
+antora:
+  extensions:
+    - require: "@antora/lunr-extension"
+    - require: "@sntke/antora-mermaid-extension"
+      mermaid_library_url: https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs # <2>
+      script_stem: header-scripts # <3>
+      mermaid_initialize_options: # <4>
+output:
+  dir: build-local-rancher-dsc/site
+runtime:
+  fetch: true

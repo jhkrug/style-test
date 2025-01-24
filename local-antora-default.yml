@@ -1,0 +1,30 @@
+site:
+  title: Style test - Antora default
+  start_page: next@style-test:en:introduction.adoc
+
+content:
+  sources:
+    - url: ./
+      branches: [HEAD]
+      start_paths: [docs/next]
+
+ui:
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
+
+asciidoc:
+  attributes:
+    page-pagination: ""
+  extensions:
+    - "@asciidoctor/tabs"
+antora:
+  extensions:
+    - require: "@antora/lunr-extension"
+    - require: "@sntke/antora-mermaid-extension"
+      mermaid_library_url: https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs # <2>
+      script_stem: header-scripts # <3>
+      mermaid_initialize_options: # <4>
+
+output:
+  dir: build-local-antora-def/site
