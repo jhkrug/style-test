@@ -24,7 +24,7 @@ rancher-dsc-local:
 	npx antora --version
 	npx antora --stacktrace --log-format=pretty --log-level=info \
 		pb-rancher-dsc-local.yml \
-		2>&1 | tee tmp/rancher-dsc.log
+		2>&1 | tee tmp/rancher-dsc-local.log
 
 
 clean:
