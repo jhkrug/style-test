@@ -4,6 +4,8 @@
 .Note title
 ====
 Note content
+
+And a https://blah.com[link]
 ====
 
 A normal paragraph in here.
@@ -39,4 +41,3 @@ And nested:
 Important content. Which has the wrong icon (same as the outer block). Why? Todo!
 =====
 ====
-
