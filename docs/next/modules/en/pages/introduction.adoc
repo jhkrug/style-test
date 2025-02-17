@@ -40,6 +40,25 @@ fi
 A paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
+____
+*Note*: +
+This is a block quote
+
+It has a link https://linktonowhere.com[here]
+____
+
+A spacer paragraph.
+
+.A title for the block quote
+____
+*Note*: +
+This is a block quote
+
+It has a link https://linktonowhere.com[here]
+____
+
+A spacer paragraph.
+
 .A details block. Click for content.
 [%collapsible]
 =====

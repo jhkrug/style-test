@@ -199,4 +199,48 @@ npx antora --stacktrace --log-format=pretty --log-level=info \
 =====
 
 
+.XML
+[%collapsible]
+=====
+.XML code block
+[subs="+attributes", xml]
+----
+<?xml version="1.0"?>
+<profile xmlns="http://www.suse.com/1.0/yast2ns"
+ xmlns:config="http://www.suse.com/1.0/configns">
+  <suse_register>
+    <addons config:type="list">
+      <addon>
+<name>SLES</name>
+<reg_code>cc36aae1</reg_code>
+      </addon>
+      <addon>
+<name>SLED</name>
+<reg_code>309105d4</reg_code>
+      </addon>
+      <addon>
+<name>sle-we</name>
+<reg_code>5eedd26a</reg_code>
+      </addon>
+      <addon>
+<name>sle-live-patching</name>
+<reg_code>8c541494</reg_code>
+      </addon>
+    </addons>
+  </suse_register>
+</profile>
+----
+=====
 
+.HTML
+[%collapsible]
+=====
+.HTML code block
+[subs="+attributes", html]
+----
+<body>
+  <p checked class="title" id='title'>Title</p>
+  <!-- here goes the rest of the page -->
+</body>
+----
+=====
