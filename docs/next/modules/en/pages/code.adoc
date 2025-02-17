@@ -211,20 +211,20 @@ npx antora --stacktrace --log-format=pretty --log-level=info \
   <suse_register>
     <addons config:type="list">
       <addon>
-<name>SLES</name>
-<reg_code>cc36aae1</reg_code>
+        <name>SLES</name>
+        <reg_code>cc36aae1</reg_code>
       </addon>
       <addon>
-<name>SLED</name>
-<reg_code>309105d4</reg_code>
+        <name>SLED</name>
+        <reg_code>309105d4</reg_code>
       </addon>
       <addon>
-<name>sle-we</name>
-<reg_code>5eedd26a</reg_code>
+        <name>sle-we</name>
+        <reg_code>5eedd26a</reg_code>
       </addon>
       <addon>
-<name>sle-live-patching</name>
-<reg_code>8c541494</reg_code>
+        <name>sle-live-patching</name>
+        <reg_code>8c541494</reg_code>
       </addon>
     </addons>
   </suse_register>
