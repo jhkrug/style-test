@@ -244,3 +244,108 @@ npx antora --stacktrace --log-format=pretty --log-level=info \
 </body>
 ----
 =====
+
+.Python
+[%collapsible]
+=====
+.Python code block
+[subs="+attributes", python]
+----
+import os
+from ruamel.yaml import YAML
+
+def report_files_with_unrecognized_fm_tags(front_matter):
+    """Any files with weird fm_tags"""
+    printf("=== Files with weird frontmatter tags:\n")
+    for fm in front_matter:
+        try:
+            if fm["docstore-data"]:
+                pass
+        except Exception:
+            try:
+                f = fm["frontmatter"]
+                path = fm["path"]
+                for fm_tag in f:
+                    if fm_tag not in valid_fm_tags.values():
+                        printf("Tag '%s' in file: %s\n", fm_tag, path)
+            except Exception:
+                # no frontmatter here
+                pass
+----
+=====
+
+.Ruby
+[%collapsible]
+=====
+.Ruby code block
+[subs="+attributes", ruby]
+----
+require 'json'
+
+# ARGV[0] = asset directory
+# ARGV[1] = search directory
+# ARGV[2] = "delete" to also remove unused asset file
+
+asset_dir =  ARGV[0]
+search_dir = ARGV[1]
+
+results = {"Used" => [], "Unused" => []}
+
+Dir.glob("#{asset_dir.chomp("/")}/**/*.*") do |asset_full_path|
+  asset = asset_full_path.sub(asset_dir,"")
+  if !%x[ grep -ri #{asset} #{search_dir} ].empty?
+    results["Used"] << asset
+  else
+    results["Unused"] << asset
+    if ARGV[2] && ARGV[2].downcase == "delete"
+      File.delete(asset_full_path)
+    end
+  end
+end
+
+File.write("unused_assets.json", JSON.pretty_generate(results))
+----
+=====
+
+.C/C++
+[%collapsible]
+=====
+.C/C++ code block
+[subs="+attributes", c]
+----
+#include <u.h>
+#include <libc.h>
+#include <draw.h>
+#include <thread.h>
+
+void
+diskwrite(Disk *d, Block **bp, Rune *r, uint n)
+{
+	int size, nsize;
+	Block *b;
+
+	b = *bp;
+	size = ntosize(b->u.n, nil);
+	nsize = ntosize(n, nil);
+	if(size != nsize){
+		diskrelease(d, b);
+		b = disknewblock(d, n);
+		*bp = b;
+	}
+	if(pwrite(d->fd, r, n*sizeof(Rune), b->addr) != n*sizeof(Rune))
+		error("write error to temp file");
+	b->u.n = n;
+}
+
+void
+diskread(Disk *d, Block *b, Rune *r, uint n)
+{
+	if(n > b->u.n)
+		error("internal error: diskread");
+
+	ntosize(b->u.n, nil);
+	if(pread(d->fd, r, n*sizeof(Rune), b->addr) != n*sizeof(Rune))
+		error("read error from temp file");
+}
+----
+=====
