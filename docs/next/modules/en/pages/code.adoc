@@ -318,6 +318,8 @@ File.write("unused_assets.json", JSON.pretty_generate(results))
 #include <draw.h>
 #include <thread.h>
 
+// Disk write and read functions
+
 void
 diskwrite(Disk *d, Block **bp, Rune *r, uint n)
 {
