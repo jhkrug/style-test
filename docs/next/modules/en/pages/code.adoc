@@ -351,3 +351,16 @@ diskread(Disk *d, Block *b, Rune *r, uint n)
 }
 ----
 =====
+
+.diff
+[%collapsible]
+=====
+.diff
+[subs="+attributes", diff]
+----
+a line
+- this line is removed
++ this line is added
+another line
+----
+=====
