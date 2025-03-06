@@ -198,7 +198,7 @@ An explanatory table for step 2.
 +
 . This is step 3 of the procedure.
 +
-A explanotory code block:
+A explanatory code block:
 +
 [subs="+attributes", bash]
 ----
