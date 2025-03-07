@@ -180,36 +180,6 @@ ____
 
 === Procedures
 
-.Procedure: This is a procedure to be followed
-. This is step 1 of the procedure.
-+
-This is explanatory text for step 1.
-+
-. This is step 2 of the procedure.
-+
-An explanatory table for step 2.
-+
-[cols="2,2",options="header"]
-|===
-|Header 1 |Header 2
-|Cell 1	 |Cell 2
-|Cell 3	 |Cell 4
-|===
-+
-. This is step 3 of the procedure.
-+
-A explanatory code block:
-+
-[subs="+attributes", bash]
-----
-#!/bin/bash
-echo "Hello world!"
-----
-
-. This is step 4 of the procedure.
-
-This is the next paragraph, after the procedure.
-
 .Procedure: This is a procedure to be followed, using a quote block.
 [role=procedure]
 _____
