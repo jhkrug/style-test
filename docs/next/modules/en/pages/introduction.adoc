@@ -180,6 +180,8 @@ ____
 
 === Procedures
 
+A paragraph before the procedure.
+
 .Procedure: This is a procedure to be followed, using a quote block.
 [role=procedure]
 _____
@@ -217,8 +219,4 @@ echo "Goodbye world!"
 ----
 _____
 
-A standard list.
-
-. List 1
-. List 2
-. List 3
+A paragraph after the procedure.
