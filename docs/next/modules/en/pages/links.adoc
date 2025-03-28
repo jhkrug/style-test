@@ -42,6 +42,16 @@ A monospace link escaped with `[subs=-macros]`:
 [subs=-macros]
 `https://blah-fubar.org`
 
+A link escaped with `[subs=-macros]` and additional surrounding text:
+
+[subs=-macros]
+Additional https://blah-fubar.org surrounding text.
+
+A monospace link escaped with `[subs=-macros]` and additional surrounding text:
+
+[subs=-macros]
+Additional `https://blah-fubar.org` surrounding text.
+
 The literal monospace method:
 
 `+https://blah-fubar.org+`
