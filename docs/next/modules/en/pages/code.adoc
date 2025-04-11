@@ -364,3 +364,16 @@ a line
 another line
 ----
 =====
+
+.Console/Cut-for-Paste
+[%collapsible]
+=====
+.Console
+[subs="+attributes", console]
+----
+$ ls
+$ pwd
+# bogus_rm_rf_cmd
+$ find . -name '*.adoc'
+----
+=====
