@@ -2,4 +2,4 @@
 
 From: https://gitlab.com/opendevise/oss/antora-swagger-ui-extension
 
-swagger-ui::attachment$v1.4-swagger.json[]
+swagger-ui::attachment$v1.4-swagger.json[docExpansion=none]
