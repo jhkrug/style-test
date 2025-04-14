@@ -32,3 +32,7 @@ clean:
 
 environment:
 	npm ci || npm install
+
+preview:
+	npx http-server build-rancher-dsc-local/site -c-1
+

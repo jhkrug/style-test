@@ -9,3 +9,4 @@
 * xref:images.adoc[]
 * xref:mermaid.adoc[]
 * xref:links.adoc[]
+* xref:api.adoc[]

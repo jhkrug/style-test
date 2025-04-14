@@ -24,6 +24,7 @@ asciidoc:
 antora:
   extensions:
     - require: "@antora/lunr-extension"
+    - '@opendevise/antora-swagger-ui-extension'
     - require: "@sntke/antora-mermaid-extension"
       mermaid_library_url: https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs # <2>
       script_stem: header-scripts # <3>
