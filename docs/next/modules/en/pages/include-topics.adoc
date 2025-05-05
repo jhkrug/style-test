@@ -26,7 +26,7 @@ include::partial$topics.adoc[tags=**]
 
 ## Everything outside a `tag:: ... end::`
 
-Using `include::partial$topics.adoc[tags=!*]'.
+Using `include::partial$topics.adoc[tags=!*]`.
 
 include::partial$topics.adoc[tags=!*]
 
