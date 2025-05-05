@@ -1,5 +1,7 @@
 = Links
 
+== Links and pass throughs
+
 This is just a link:
 
 https://blah-fubar.org
@@ -55,3 +57,19 @@ Additional `https://blah-fubar.org` surrounding text.
 The literal monospace method:
 
 `+https://blah-fubar.org+`
+
+== URLs and URL macros
+
+URLs and URL macros are preferred. Use link macros only where necessary
+(relative links to pdf or html, to adoc, use an xref).
+
+This is a URL https://documentation.suse.com.
+
+This is a URL macro https://documentation.suse.com[].
+
+This is a URL macro with link text https://documentation.suse.com[SUSE docs].
+
+As a link link:https://documentation.suse.com[].
+
+As a link with link text link:https://documentation.suse.com[SUSE docs].
+

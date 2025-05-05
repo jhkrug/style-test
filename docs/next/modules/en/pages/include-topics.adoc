@@ -1,0 +1,15 @@
+# Topic based content
+
+This extracts topics from a `topics.adoc` file in the `partials` directory.
+
+This should include just for topic 1.
+
+include::partial$topics.adoc[tag=topic-1]
+
+And this for topic 2.
+
+include::partial$topics.adoc[tag=topic-2]
+
+And again for topic 1.
+
+include::partial$topics.adoc[tag=topic-1]

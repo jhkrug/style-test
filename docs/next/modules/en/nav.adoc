@@ -9,6 +9,7 @@
 * xref:images.adoc[]
 * xref:mermaid.adoc[]
 * xref:links.adoc[]
+* xref:include-topics.adoc[]
 * API documentation
 ** xref:api-antora.adoc[]
 ** xref:api-redoc.adoc[]

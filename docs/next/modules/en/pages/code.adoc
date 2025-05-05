@@ -278,7 +278,7 @@ def report_files_with_unrecognized_fm_tags(front_matter):
 [%collapsible]
 =====
 .Ruby code block
-[subs="+attributes", ruby]
+[, ruby]
 ----
 require 'json'
 
