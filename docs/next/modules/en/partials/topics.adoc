@@ -1,6 +1,8 @@
 
 // Some example topics
 
+This line is not in a topic, just in the include file.
+
 tag::topic-1[]
 This is topic 1 content.
 end::topic-1[]
@@ -8,3 +10,9 @@ end::topic-1[]
 tag::topic-2[]
 Here is topic 2 content.
 end::topic-2[]
+
+tag::topic-3[]
+Here is topic 3 content.
+end::topic-3[]
+
+Another line just sitting there in the include file not in any tags.

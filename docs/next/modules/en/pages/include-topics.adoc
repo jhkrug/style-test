@@ -2,14 +2,31 @@
 
 This extracts topics from a `topics.adoc` file in the `partials` directory.
 
-This should include just for topic 1.
+## topic 1.
 
 include::partial$topics.adoc[tag=topic-1]
 
-And this for topic 2.
+## topic 2.
+
+Using `include::partial$topics.adoc[tag=topic-2]`.
 
 include::partial$topics.adoc[tag=topic-2]
 
-And again for topic 1.
+## again for topic 1.
+
+Using `include::partial$topics.adoc[tag=topic-1]`.
 
 include::partial$topics.adoc[tag=topic-1]
+
+## the whole partials file.
+
+Using `include::partial$topics.adoc[tags=**]`.
+
+include::partial$topics.adoc[tags=**]
+
+## Everything outside a `tag:: ... end::`
+
+Using `include::partial$topics.adoc[tags=!*]'.
+
+include::partial$topics.adoc[tags=!*]
+
