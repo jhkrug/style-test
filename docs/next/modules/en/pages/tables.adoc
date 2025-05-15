@@ -124,13 +124,13 @@ Look at xref:#ref-table-2[] to the second table.
 
 == Complex example from Dmitri Popov
 
-:trserver: Trento Server
-:tragent: Trento Agent
+:trserver: Trento&nbsp;Server
+:tragent: Trento&nbsp;Agent
 
 .Compatibility matrix between {trserver} and {tragent}s
-[cols="^1,^1,^1,^1,^1,^1,^1,^1,^1", options="header"]
+[cols="^2,^1,^1,^1,^1,^1,^1,^1,^1", options="header"]
 |===
-^|Trento&nbsp; Agent 8+^|{trserver}|
+^|{tragent} 8+^|{trserver}|
 |1.0 |1.1 |1.2 |2.0 |2.1 |2.2 |2.3 |2.4
 
 |1.0 |[.green]#✓# | | | | | | |
