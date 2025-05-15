@@ -2,6 +2,10 @@
 
 == Links and pass throughs
 
+Example from JM:
+
+`pass:[https://releases.rancher.com/harvester/{version}/version.yaml]`
+
 This is just a link:
 
 https://blah-fubar.org
