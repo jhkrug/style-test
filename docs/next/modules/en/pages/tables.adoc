@@ -138,7 +138,7 @@ Look at xref:#ref-table-2[] to the second table.
 |1.2 |[.green]#✓# |[.green]#✓# |[.green]#✓# | | | | |
 |2.0 | | | |[.green]#✓# | | | |
 |2.1 | | | |[.green]#✓# |[.green]#✓# | | |
-|2.2 | | | |[.green]#✓# |[.green]#✓# |[.green]#✓# | |
+|2.2 |[.blue]#🗶# | | |[.green]#✓# |[.green]#✓# |[.green]#✓# | |
 |2.3 |[.red]#☒# | | |[.green]#✓# |[.green]#✓# |[.green]#✓# |[.green]#✓# |
 |2.4 |[.red]#🗶# | | |[.green]#✔# |[.green]#🗹# |[.green]#✓# |[.green]#🎉# |[.green]#✓#
 |===
