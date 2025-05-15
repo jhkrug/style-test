@@ -22,7 +22,7 @@ This a monospace link:
 
 `https://blah-fubar.org`
 
-This is a monospace linke with a name:
+This is a monospace link with a name:
 
 https://blah-fubar.org[`Blah Fubar`]
 
