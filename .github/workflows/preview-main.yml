@@ -38,7 +38,7 @@ jobs:
           path: build-rancher-dsc/site
       - name: Push the static site content to gh-pages branch
         run: |
-          echo "url: ${{ steps.deployment.outputs.page_url}"
+          echo "url: ${{ steps.deployment.outputs.page_url }}"
           git config --global user.name "${{ github.actor }}"
           git config --global user.email "${{ github.actor }}@users.noreply.github.com"
           mv build-rancher-dsc/site ../site-temp
