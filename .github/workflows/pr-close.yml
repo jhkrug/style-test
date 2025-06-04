@@ -13,4 +13,4 @@ jobs:
     steps:
       - name: PR closed
         run: |
-          echo "pr-closed ${{ github.ref }}"
+          echo "pr-closed ${{ github.ref }}, ${{ github.base_ref }}, ${{ github.sha }}"
