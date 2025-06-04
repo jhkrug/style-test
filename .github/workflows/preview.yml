@@ -72,7 +72,7 @@ jobs:
       - run: make environment && make rancher-dsc
       - uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: .
+          folder: build-rancher-dsc/site
           branch: gh-pages
           clean-exclude: pr-preview
           force: false
