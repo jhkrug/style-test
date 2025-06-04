@@ -1,52 +1,78 @@
-name: style-n
+# name: style-n
+# on:
+#   push:
+#     branches: [main]
+#   workflow_dispatch:
+# concurrency:
+#   group: github-pages
+#   cancel-in-progress: false
+# permissions:
+#   contents: write
+#   pages: write
+#   id-token: write
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     environment:
+#       name: github-pages
+#       url: ${{ steps.deployment.outputs.page_url }}
+#     steps:
+#       - name: Checkout repository
+#         uses: actions/checkout@v4
+#         with:
+#           submodules: recursive
+#       - name: Configure Pages
+#         uses: actions/configure-pages@v3
+#       - name: Install Node.js
+#         uses: actions/setup-node@v4
+#         with:
+#           node-version: "18"
+#       - name: Install Antora with the Antora Lunr Extension
+#         run: make environment
+#       - name: Generate Site
+#         run: make rancher-dsc
+#       - name: Upload Artifacts
+#         uses: actions/upload-pages-artifact@v3
+#         with:
+#           path: build-rancher-dsc/site
+#       - name: Push the static site content to gh-pages branch
+#         run: |
+#           git config --global user.name "${{ github.actor }}"
+#           git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+#           mv build-rancher-dsc/site ../site-temp
+#           git checkout --orphan gh-pages
+#           git rm -rf .
+#           rm -rf node_modules tmp
+#           mv ../site-temp/* .
+#           git add .
+#           git commit -m "Deploy to gh-pages branch"
+#           git push --force origin gh-pages
+#       - name: Deploy to GitHub Pages
+#         id: deployment
+#         uses: actions/deploy-pages@v4
+
+
+# .github/workflows/deploy.yml
+name: Deploy
 on:
   push:
-    branches: [main]
-  workflow_dispatch:
-concurrency:
-  group: github-pages
-  cancel-in-progress: false
-permissions:
-  contents: write
-  pages: write
-  id-token: write
+    branches:
+      - main
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           submodules: recursive
-      - name: Configure Pages
-        uses: actions/configure-pages@v3
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "18"
-      - name: Install Antora with the Antora Lunr Extension
-        run: make environment
-      - name: Generate Site
-        run: make rancher-dsc
-      - name: Upload Artifacts
-        uses: actions/upload-pages-artifact@v3
+      - run: make environment && make rancher-dsc
+      - uses: JamesIves/github-pages-deploy-action@v4
         with:
-          path: build-rancher-dsc/site
-      - name: Push the static site content to gh-pages branch
-        run: |
-          git config --global user.name "${{ github.actor }}"
-          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
-          mv build-rancher-dsc/site ../site-temp
-          git checkout --orphan gh-pages
-          git rm -rf .
-          rm -rf node_modules tmp
-          mv ../site-temp/* .
-          git add .
-          git commit -m "Deploy to gh-pages branch"
-          git push --force origin gh-pages
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          folder: .
+          branch: gh-pages
+          clean-exclude: pr-preview
+          force: false
