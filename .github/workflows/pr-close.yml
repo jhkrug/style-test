@@ -1,4 +1,4 @@
-name: Delete PR preview ${{github.ref }}
+name: Delete PR preview
 
 on:
   pull_request:
@@ -13,4 +13,4 @@ jobs:
     steps:
       - name: PR closed
         run: |
-          echo "pr-closed"
+          echo "pr-closed ${{ github.ref }}"
