@@ -1,0 +1,20 @@
+name: Deploy PR previews
+
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+
+concurrency: preview-${{ github.ref }}
+
+jobs:
+  deploy-preview:
+    runs-on: ubuntu-latest
+    steps:
+      #- name: Checkout
+      #  uses: actions/checkout@v4
+      - name: Build
+        run: |
+          echo "pr-build"

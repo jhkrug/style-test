@@ -1,0 +1,16 @@
+name: Deploy PR previews
+
+on:
+  pull_request:
+    types:
+      - closed
+
+concurrency: preview-${{ github.ref }}
+
+jobs:
+  deploy-preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: PR closed
+        run: |
+          echo "pr-closed"
