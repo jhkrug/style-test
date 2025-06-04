@@ -17,4 +17,4 @@ jobs:
       #  uses: actions/checkout@v4
       - name: Build
         run: |
-          echo "pr-build ${{ github.ref }}"
+          echo "pr-build ${{ github.sha }}"
