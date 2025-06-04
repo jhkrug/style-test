@@ -1,4 +1,4 @@
-name: Deploy PR previews
+name: Deploy PR preview ${{ github.ref }}
 
 on:
   pull_request:
@@ -7,7 +7,7 @@ on:
       - reopened
       - synchronize
 
-concurrency: preview-${{ github.ref }}
+concurrency: preview-pr-${{ github.ref }}
 
 jobs:
   deploy-preview:

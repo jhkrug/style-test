@@ -1,4 +1,4 @@
-name: style-n deployment
+name: Deploy main gh-pages
 on:
   push:
     branches: [main]

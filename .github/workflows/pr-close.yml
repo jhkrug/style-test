@@ -1,11 +1,11 @@
-name: Deploy PR previews
+name: Delete PR preview ${{github.ref }}
 
 on:
   pull_request:
     types:
       - closed
 
-concurrency: preview-${{ github.ref }}
+concurrency: pr-close-${{ github.ref }}
 
 jobs:
   deploy-preview:
