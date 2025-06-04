@@ -8,7 +8,7 @@ on:
 concurrency: pr-close-${{ github.ref }}
 
 jobs:
-  deploy-preview:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: PR closed

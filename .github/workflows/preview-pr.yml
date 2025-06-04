@@ -10,8 +10,10 @@ on:
 concurrency: preview-pr-${{ github.ref }}
 
 jobs:
-  deploy-preview:
+  build:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
     steps:
       #- name: Checkout
       #  uses: actions/checkout@v4
