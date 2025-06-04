@@ -34,7 +34,7 @@ jobs:
       - name: Deploy preview
         uses: rossjrw/pr-preview-action@v1
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.pr-preview-test }}
           source-dir: ./build-rancher-dsc/
           preview-branch: gh-pages
           umbrella-dir: pr-preview
