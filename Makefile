@@ -12,7 +12,7 @@ rancher-current:
 		pb-rancher-current.yml \
 		2>&1 | tee tmp/rancher-current.log
 
-rancher-dsc:
+rancher-dsc: environment
 	mkdir -p tmp
 	npx antora --version
 	npx antora --stacktrace --log-format=pretty --log-level=info \
@@ -35,4 +35,3 @@ environment:
 
 preview:
 	npx http-server build-rancher-dsc-local/site -c-1
-
