@@ -31,8 +31,24 @@ jobs:
         run: |
           make environment
           make rancher-dsc
+      - name: Upload Artifacts
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: build-rancher-dsc/site
+      - name: Push the static site content to gh-pages branch
+        run: |
+          git config --global user.name "${{ github.actor }}"
+          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+          mv build-rancher-dsc/site ../site-temp
+          git checkout --orphan gh-pages
+          git rm -rf .
+          rm -rf node_modules tmp
+          mv ../site-temp/* .
+          git add .
+          git commit -m "Deploy to gh-pages branch"
+          git push --force origin gh-pages
 
       - name: Deploy preview
         uses: rossjrw/pr-preview-action@v1
         with:
-          source-dir: ./build-rancher-dsc/site/
+          source-dir: .
