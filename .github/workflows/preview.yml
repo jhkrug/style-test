@@ -30,7 +30,7 @@ jobs:
         with:
           node-version: 20.x
       - name: Build preview
-        if: github.event.action != 'closed' # You might want to skip the build if the PR has been closed
+        if: github.event.action != 'closed'
         run: |
           make rancher-dsc
 
