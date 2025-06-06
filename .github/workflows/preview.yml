@@ -13,7 +13,7 @@ permissions:
   contents: read
   id-token: write
   pages: write
-  pull-requests: read
+  pull-requests: write
 
 concurrency: preview-${{ github.ref }}
 
