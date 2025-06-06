@@ -9,6 +9,11 @@ on:
       - synchronize
       - closed
 
+permissions:
+  contents: read
+  id-token: write
+  pages: write
+
 concurrency: preview-${{ github.ref }}
 
 jobs:
@@ -32,3 +37,4 @@ jobs:
         uses: rossjrw/pr-preview-action@v1
         with:
           source-dir: ./build-rancher-dsc/site/
+          token: ${{ secrets.GITHUB_TOKEN }}
