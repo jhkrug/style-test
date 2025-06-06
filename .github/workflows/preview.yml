@@ -32,7 +32,7 @@ jobs:
       - name: Build preview
         if: github.event.action != 'closed' # You might want to skip the build if the PR has been closed
         run: |
-          make rancher-dsc
+          ls -lRa . && make rancher-dsc
 
       - name: Deploy preview
         uses: rossjrw/pr-preview-action@v1
