@@ -10,7 +10,7 @@ on:
       - closed
 
 permissions:
-  contents: read
+  contents: write
   id-token: write
   pages: write
   pull-requests: write
@@ -38,4 +38,3 @@ jobs:
         uses: rossjrw/pr-preview-action@v1
         with:
           source-dir: ./build-rancher-dsc/site/
-          token: ${{ secrets.GITHUB_TOKEN }}
