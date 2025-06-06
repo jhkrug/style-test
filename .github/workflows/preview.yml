@@ -18,14 +18,14 @@ jobs:
   deploy-preview:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout 🛎️
         uses: actions/checkout@v4
         with:
           submodules: recursive
-      - name: Build
+      - name: Install and Build 🔧
         if: github.event.action != 'closed'
         run: make rancher-dsc
-      - name: Deploy preview
+      - name: Deploy preview 🚀
         uses: rossjrw/pr-preview-action@v1
         with:
           source-dir: build-rancher-dsc/site
