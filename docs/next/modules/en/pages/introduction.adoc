@@ -1,6 +1,6 @@
 = Style test
 
-A paragraph. Change.
+A paragraph. Change2.
 Formatting *strong*, **st**rong, _italic_, `mono`, #highlight#, ~subscript~,
 ^superscript^,  "curved double quotes".
 
