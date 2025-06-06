@@ -17,6 +17,7 @@ permissions:
 jobs:
   deploy-preview:
     runs-on: ubuntu-latest
+    if: github.repository == 'jhkrug/style-test'
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
