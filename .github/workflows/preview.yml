@@ -22,8 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout style-test preview
-        #uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
-        uses: actions/checkout@v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           submodules: recursive
       #- name: Setup
@@ -33,6 +32,7 @@ jobs:
       - name: Build preview
         if: github.event.action != 'closed' # You might want to skip the build if the PR has been closed
         run: |
+          cat docs/next/modules/en/pages/introduction.adoc
           make rancher-dsc
           ls -lRa build-rancher-dsc
 
