@@ -2,6 +2,7 @@ site:
   title: Style test - Rancher DSC
   start_page: next@style-test:en:introduction.adoc
   url: https://jhkrug.github.io/style-test/
+  url_extension_style: abs
 
 content:
   sources:
