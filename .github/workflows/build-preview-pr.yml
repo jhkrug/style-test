@@ -45,13 +45,13 @@ jobs:
           git config --global user.name "${{ github.actor }}"
           git config --global user.email "${{ github.actor }}@users.noreply.github.com"
           mv build-rancher-dsc/site ../site-temp
-          git checkout gh-pages
+          git checkout gh-pages || git checkout --orphan gh-pages
           rm -rf node_modules tmp
           mkdir -p preview/pr
           mv ../site-temp/* preview/pr/.
           git add .
           git commit -m "Deploy to gh-pages branch"
           git push --force origin gh-pages
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      #- name: Deploy to GitHub Pages
+      # id: deployment
+      # uses: actions/deploy-pages@v4
