@@ -1,4 +1,4 @@
-name: Build and deploy
+name: Build and deploy main
 on:
   # Runs every hour.
   #schedule:

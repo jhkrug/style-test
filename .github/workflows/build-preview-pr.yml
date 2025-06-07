@@ -1,9 +1,8 @@
-name: Build and deploy
+name: Build and deploy PR
 on:
   # Runs every hour.
   #schedule:
   #  - cron: "0 * * * *"
-  # Runs whenever a change is pushed to the main branch
   pull_request:
     types:
       - opened
