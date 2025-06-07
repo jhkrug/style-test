@@ -20,9 +20,9 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+    #environment:
+    #  name: github-pages
+    #  url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -52,6 +52,6 @@ jobs:
           git add .
           git commit -m "Deploy to gh-pages branch"
           git push --force origin gh-pages
-      #- name: Deploy to GitHub Pages
-      # id: deployment
-      # uses: actions/deploy-pages@v4
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
