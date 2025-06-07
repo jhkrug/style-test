@@ -47,13 +47,13 @@ jobs:
           mv build-rancher-dsc/site ../site-temp
           git rm -rf .
           rm -rf node_modules tmp
-          git checkout gh-pages || git checkout --orphan gh-pages
+          git checkout gh-pages
           mkdir -p preview/pr
           mv ../site-temp/* preview/pr/.
           ls -l
           git add .
           git commit -m "Deploy to gh-pages branch"
-          git push --force origin gh-pages
+          git push --set-upstream origin gh-pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
