@@ -1,11 +1,11 @@
-= API documentation for Harvester using redoc
+= API documentation for Rancher using redoc
 
 ++++
 <div class="api-doc">
     <redoc id='redoc-container'></redoc>
     <script src="https://cdn.redoc.ly/redoc/latest/bundles/redoc.standalone.js"></script>
     <script>
-        Redoc.init('./_attachments/v1.4-swagger.json',
+        Redoc.init('./_attachments/rancher.json',
         {scrollYOffset: '.toolbar'},
         document.getElementById('redoc-container'))
     </script>

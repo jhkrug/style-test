@@ -12,4 +12,6 @@
 * xref:include-topics.adoc[]
 * API documentation
 ** xref:api-antora.adoc[]
+** xref:api-for-rancher-antora.adoc[]
 ** xref:api-redoc.adoc[]
+** xref:api-for-rancher-redoc.adoc[]

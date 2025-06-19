@@ -1,0 +1,5 @@
+= API documentation for Rancher using the Antora Swagger UI Extension
+
+From: https://gitlab.com/opendevise/oss/antora-swagger-ui-extension
+
+swagger-ui::attachment$rancher.json[docExpansion=none]

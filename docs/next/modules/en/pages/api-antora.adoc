@@ -1,4 +1,4 @@
-= API documentation using the Antora Swagger UI Extension
+= API documentation for Harvester using the Antora Swagger UI Extension
 
 From: https://gitlab.com/opendevise/oss/antora-swagger-ui-extension
 
