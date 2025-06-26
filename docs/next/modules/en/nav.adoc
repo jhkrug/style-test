@@ -10,6 +10,7 @@
 * xref:mermaid.adoc[]
 * xref:links.adoc[]
 * xref:include-topics.adoc[]
+* xref:av.adoc[]
 * API documentation
 ** xref:api-antora.adoc[]
 ** xref:api-for-rancher-antora.adoc[]

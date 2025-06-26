@@ -1,0 +1,19 @@
+# Audiovisual content
+
+## Video
+
+### Youtube
+
+.SUSE pronunciation
+video::nLdexZlVkAY[youtube,width=800,height=600]
+
+### Vimeo
+
+.Punk
+video::1093837607[vimeo,width=1024,height=600]
+
+## Audio
+
+MP3 also easy.
+
+
