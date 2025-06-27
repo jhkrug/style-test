@@ -1,0 +1,9 @@
+= API documentation for Harvester using Scalar (scalar.com)
+
+++++
+<script
+  id="api-reference"
+  data-url="./_attachments/v1.4-swagger.json">
+  </script>
+<script src="https://cdn.jsdelivr.net/npm/@scalar/api-reference"></script>
+++++

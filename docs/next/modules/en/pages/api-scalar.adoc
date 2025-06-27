@@ -1,0 +1,36 @@
+= API documentation for Harvester using Scalar (scalar.com)
+
+++++
+<!doctype html>
+<html>
+  <head>
+    <title>Scalar API Reference</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap"
+      rel="stylesheet" />
+    <!-- Overwrite the Scalar font variable -->
+    <style>
+      :root {
+        --scalar-font: 'SUSE', 'Roboto', sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <script
+      id="api-reference"
+      data-url="./_attachments/v1.4-swagger.json">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@scalar/api-reference"></script>
+    <script>
+      var configuration = {
+        theme: 'mars',
+        withDefaultFonts: 'false',
+      }
+    </script>
+  </body>
+</html>
+++++

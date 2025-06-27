@@ -13,6 +13,8 @@
 * xref:av.adoc[]
 * API documentation
 ** xref:api-antora.adoc[]
-** xref:api-for-rancher-antora.adoc[]
 ** xref:api-redoc.adoc[]
+** xref:api-scalar.adoc[]
+** xref:api-for-rancher-antora.adoc[]
 ** xref:api-for-rancher-redoc.adoc[]
+** xref:api-for-rancher-scalar.adoc[]
